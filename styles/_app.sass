@@ -1,0 +1,543 @@
+//Roots Creative | Owen Keary
+
+// Functions
+
+@function vw($px-vw, $base-vw: 1154px)    
+  @return ($px-vw * 100vw) / $base-vw
+
+//=====================================  
+//SASS Variables
+//=====================================
+$blue400: #020536
+$blue300: #040a47
+$blue200: #2690FC
+$blue100: #26E2D1
+$purple: #5e2f89
+$pink: #FD7AE3
+$yellow: #f1d32b
+$red: #ff3366
+$black: #000000
+$grey100: #ababab
+$grey200: #737373
+$white: #ffffff
+$orange: #FD471D
+  
+//=====================================
+//Generic
+//=====================================
+html, body 
+  min-height: 100vh
+  // min-width: 100vw
+  color: white
+  font-family: 'ondo-regular', Segoe UI, sans-serif
+  scroll-behavior: smooth
+
+main,
+.page-content 
+  max-width: 1154px
+  margin: 0 auto
+
+// main,
+// .page-content,
+// .min-page
+//   min-width: 1154px
+
+.blog-item img 
+  object-fit: cover
+
+body *
+  outline: none !important
+
+.CookieConsent button 
+  letter-spacing: 2px
+  padding: 10px 15px
+
+.error_page 
+  height: 100vh
+  overflow-y: hidden
+
+
+//=====================================
+// CSS Gradient
+//=====================================
+
+.bg-gradient-td 
+  background: transparentize($blue100, 0)
+  background: linear-gradient(180deg, transparentize($black, 0.33) 0%, transparent 100%)
+  background-blend-mode: multiply
+
+.bg-gradient-footer
+  background: transparentize($blue300, 0)
+  background: linear-gradient(180deg, transparent 0%, $black 100%)
+  background-blend-mode: multiply
+
+
+
+.bg-gradient-primary
+  background: transparentize($blue100, 0)
+  background: linear-gradient(90deg, $blue100 0%, $blue200 100%)
+
+.bg-gradient-secondary
+  background: transparentize($red, 0)
+  background: linear-gradient(180deg, $red 0%, $orange 100%)
+
+.bg-gradient-alt
+  background: transparentize($pink, 0)
+  background: linear-gradient(180deg, $red 0%, $pink 100%)
+
+//=====================================
+//Navigation
+//=====================================
+
+.logo-center div
+  margin: 0 auto
+
+.nav a,
+.nav a
+  position: relative
+  letter-spacing: 3px
+  
+.nav a::after
+  content: ""
+  bottom: -1.5rem
+  height: 3px
+  width: 50%
+  background-color: transparent
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+
+
+.nav a.active::after
+  background-colorf: $blue100
+
+.nav a:active::after
+  background-color: $blue100
+
+.nav a:hover::after
+  background-color: $red
+
+.nav a.underline-hidden::after
+  visibility: hidden
+
+
+.hero-bg 
+  height: calc(100vh - 97px)
+  padding-bottom: 149px
+  overflow-x: hidden
+
+.center-hero 
+  position: absolute
+  top: calc(50% - 130px)
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.video-width 
+  object-fit: cover
+
+.bottom-scroll 
+  width: 100%
+  height: 30px
+  position: absolute
+  bottom: 165px
+
+.error_page .bottom-scroll
+  bottom: 285px
+
+
+//=====================================
+//Skew
+//=====================================
+.skew
+  transform: skew(20deg)
+
+.skew .unskew
+  transform: skew(-20deg)
+
+.alt-skew
+  transform: skew(-20deg)
+
+.alt-skew .unskew
+  transform: skew(-20deg)
+
+.clip
+  clip-path: url('/images/icons/clip-path.svg')
+  clip-path: polygon(0% 0, 65% 0, 85% 100%, 25% 100%)
+  position: relative
+  
+.clip-header
+  left: 235px
+
+
+
+//=====================================
+//Header Alt 1
+//=====================================
+
+.clip-blog 
+  clip-path: url('/images/icons/clip-path.svg')
+  clip-path: polygon(0 0,75% 0,100% 100%,25% 100%)
+  position: relative
+  visibility: hidden !important
+
+.alt-1 .title
+  font-size: 12rem
+
+//=====================================
+//Font outline
+//=====================================
+
+.outline
+  color: transparent
+
+.outline.white,
+.outline.small.white
+  -webkit-text-stroke: $white 0.075rem
+
+.outline.b-100,
+.outline.small.b-100
+  -webkit-text-stroke: $blue100 0.075rem
+
+.outline.tiny.white
+  -webkit-text-stroke: $white .075rem
+
+.outline.tiny.b-100
+  -webkit-text-stroke: $blue100 .075rem
+
+.outline.thick.white
+  -webkit-text-stroke: $white .2rem
+
+.outline.thick.b-100
+  -webkit-text-stroke: $blue100 .2rem
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (-high-contrast: active), (-high-contrast: none)
+  .outline.white
+    text-shadow: .075rem .075rem 0 $white, .075rem .075rem 0 $white, .075rem .075rem 0 $white, .075rem .075rem 0 $white
+    -webkit-text-stroke: unset
+    
+  .outline.b-100
+    text-shadow: .075rem .075rem 0 $blue100, .075rem .075rem 0 $blue100, .075rem .075rem 0 $blue100, .075rem .075rem 0 $blue100
+    -webkit-text-stroke: unset
+
+  .outline.small.white
+    text-shadow: .075rem .075rem 0 $white, .075rem .075rem 0 $white, .075rem .075rem 0 $white, .075rem .075rem 0 $white
+    -webkit-text-stroke: unset
+    
+  .outline.small.b-100
+    text-shadow: .075rem .075rem 0 $blue100, .075rem .075rem 0 $blue100, .075rem .075rem 0 $blue100, .075rem .075rem 0 $blue100
+    -webkit-text-stroke: unset
+
+  .outline.tiny.white
+    text-shadow: .075rem .075rem 0 $white, .075rem .075rem 0 $white, .075rem .075rem 0 $white, .075rem .075rem 0 $white
+    -webkit-text-stroke: unset
+    
+  .outline.tiny.b-100
+    text-shadow: .075rem .075rem 0 $blue100, .075rem .075rem 0 $blue100, .075rem .075rem 0 $blue100, .075rem .075rem 0 $blue100
+    -webkit-text-stroke: unset
+
+
+
+//=====================================
+//Blog
+//=====================================
+
+.archive-page-bg
+  background: $blue300
+  background: linear-gradient(90deg, transparent 25%, $blue300 25%)
+
+.offset-border
+  padding: 2rem
+
+.markdown h2 
+   letter-spacing: 2px
+
+//=====================================
+//Products
+//=====================================
+
+.icon-row div .icon-bg-square
+  width: 40px
+  height: 40px
+  margin: 1rem 0 0 4rem
+
+.icon-bg-square.orange
+  background-color: transparent
+
+.icon-bg-square.purple
+  background-color: transparent
+
+
+//=====================================
+//Bg Container
+//=====================================
+
+.bg-container
+  background-position: center
+  background-size: cover
+
+
+.bg-blue-gradient
+  background: rgb(38,226,209)
+  background: linear-gradient(90deg, rgba(38,226,209,1) 0%, rgba(38,144,252,1) 100%)
+
+.bg-blue-400-transparent-25
+  background: transparentize($blue400, .75)
+
+.md\:vertical-center,
+.vertical-center
+  margin: 0
+  position: absolute
+  top: 50%
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+
+.contact-block
+  padding: 2rem 4rem
+
+
+ul  
+  position: relative 
+  padding-left: 4rem
+
+  li::before
+    position: absolute
+    content: ""
+    width: 1.5rem
+    height: 1.5rem
+    clip-path: polygon(0 0, 66% 0, 100% 100%, 35% 100%)
+    transform: rotate(20deg)
+    background-color: $blue100
+    left: 2rem
+
+
+//=====================================
+// Tracker
+//=====================================
+
+.tracking-wider-home
+  position: absolute
+  width: 250px
+
+
+.text-blur-heading
+  text-shadow: 0px 0px 14px #26e2d1
+
+.text-blur-sub-heading 
+  text-shadow: 0px 0px 7px #26e2d1
+
+//=====================================
+// SVG Styles
+//=====================================
+
+.top-12-vh
+  top: 12vh
+
+.header-video
+  left: 25%
+
+.header-svg-container
+  top: 12vh
+  overflow-x: hidden
+
+
+.header-svg
+  width: vw(700px)
+  height: vw(120px)
+  min-width: 40vw
+  max-width: 700px
+
+.header-svg g
+  fill: none
+  stroke: #fff
+  stroke-miterlimit: 10
+  stroke-width: 3px
+
+.header-paralellograms
+  width: vw(500px)
+  height: vw(60px)
+  position: absolute
+  min-width: 40vw
+  max-width: 700px
+  left: vw(100px)
+
+
+.header-paralellograms polygon
+  transition: 0.5s
+  fill: rgba(0,226,209,0.0)
+
+.header-paralellograms polygon:hover
+  fill: rgba(0,226,209,1)
+
+.header-paralellograms svg 
+  -webkit-filter: drop-shadow( 0px 0px 6px rgba(0, 226, 209, .9))
+  filter: drop-shadow( 0px 0px 6px rgba(0, 226, 209, .9))
+
+
+//=====================================
+// Mobile Menu
+//=====================================
+
+.mobi-open
+  display: none
+
+.mobi-menu-active
+  background: $blue300
+
+  .mobi-open
+    display: block
+
+.header-alt-1-video
+  right: 10vw
+
+.header-alt-title 
+  left: calc((100vw - 1154px)/2)
+
+.get-in-touch
+  top: 9rem
+  right: -25rem
+
+@media (max-width: 768px) 
+
+  .hero-bg
+    margin-bottom: 0
+    padding-bottom: 0
+
+  #hero
+    height: unset!important
+    min-height: unset !important
+
+  .error_page 
+    #hero 
+      height: 50vh !important
+
+    #hero 
+      margin-bottom: 0
+      padding-bottom: 0
+
+    .center-hero 
+      top: 50%
+      
+    .bottom-scroll
+      position: relative
+      bottom: 0
+      height: 0
+
+    .clip
+      left: 100px
+
+
+  
+  .archive-page-bg
+    background: $blue300
+
+  .header-alt-1-video
+    right: 0
+    left: 20vw
+
+  .header-alt-title 
+    left: 0
+    
+  .contact-block
+    padding: 0
+
+  .md\:vertical-center
+    margin: unset
+    position: unset
+    top: unset
+    -ms-transform: unset
+    transform: unset
+
+  .get-in-touch
+    top: 16rem
+    right: 0
+    left: 60vw
+
+  .icon-row div .icon-bg-square
+    margin: 1rem 0 0 3rem
+
+  ul  
+    padding-left: 2rem
+
+    li::before
+      left: 0rem
+
+  .footer\:text-tiny 
+    font-size: .75rem
+
+.top-12-vh
+  top: 6vh
+
+.product-center-hy40 
+  position: relative
+  left: -22px
+
+.product-center-proto 
+  position: relative
+  left: -14px
+
+@media (min-width: 1248px)
+  .top-12-vh
+    top: 12vh 
+
+
+//=====================================
+// Product Icons
+//=====================================
+
+.hy-40-icons 
+  left: -19px
+
+.logo-product 
+  height: 100%
+
+//Force portrait mode
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape)
+  html
+    transform: rotate(-90deg)
+    transform-origin: left top
+    width: 100vh
+    overflow-x: hidden
+    position: absolute
+    top: 100%
+    left: 0
+
+
+@media not all and (min-resolution:.001dpcm)
+  @supports (-webkit-appearance:none) 
+    .mobile-header-static
+      padding-bottom: 140px
+      margin-top: -140px
+
+    #hero 
+      padding-bottom: 0
+      margin-bottom: 0
+
+
+//Video Btn
+
+.video-btn
+  padding: 0.5em 1.5em 0.5em 2.75em
+  color: #26E2D1
+  position: relative
+  margin: 0 .5em
+  display: inline-block
+  &::before
+    content: url(/images/icons/icon_play.svg)
+    position: absolute
+    top: .45em
+    left: .75em
+    width: 1.5em
+
+
+.video-btn.purple 
+  background: $purple
+  color: white
+
+.video-btn.orange
+  background: $orange
+  color: white
+
+
+      

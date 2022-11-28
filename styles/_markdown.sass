@@ -1,0 +1,93 @@
+.markdown
+  padding: 0rem 4rem 4rem
+  line-height: 2.2
+
+  p, li
+    font-size: 1rem
+    margin: 1rem 0
+
+  strong
+    font-family: 'ondo-medium', 'ondo-regular', 'Segoe UI', 'sans-serif'
+
+  em
+    font-family: 'ondo-regular-italic', 'ondo-regular', 'Segoe UI', 'sans-serif'
+
+  strong em
+    font-family: 'ondo-medium', 'ondo-medium-italic', 'Segoe UI', 'sans-serif'
+
+
+  h1,h2,h3,h4,h5,h6
+    font-family: 'ondo-medium', 'ondo-regular', 'Segoe UI', 'sans-serif'
+    text-transform: uppercase
+    margin: 1rem 0
+    line-height: 1.2
+
+  h1
+    font-size: 2rem
+    -webkit-text-stroke: $blue100 .15rem
+    color: transparent
+
+  h2
+    font-size: 1.5rem
+    -webkit-text-stroke: $blue100 .15rem
+    color: transparent
+  
+  h3
+    font-size: 1.3rem
+    color: $red
+
+  h4
+    font-size: 1.2rem
+    color: $blue100
+
+  h5
+    font-size: 1.1rem
+    color: white
+
+  h6
+    font-size: 1rem
+    color: blue
+
+
+
+  blockquote 
+    position: relative
+
+    p 
+      margin: 1.5rem 0 1.5rem 3rem
+
+    p::before
+      position: absolute
+      content: ""
+      width: 4rem
+      height: 3.5rem
+      transform: skew(20deg) rotate(110deg)
+      background-color: none
+      border: .4rem solid $blue100
+      left: -2rem
+      top: -3rem
+
+      
+      
+
+
+@media (max-width: 768px) 
+  .markdown
+    padding: 0rem 1rem 1rem
+    line-height: 2.2
+
+    blockquote 
+
+      p
+        margin: .5rem 0 1.5rem 1.5rem
+
+      p::before
+        position: absolute
+        content: ""
+        width: 0.2rem
+        height: 2rem
+        background-color: $blue100
+        transform: none
+        border: none
+        left: 0
+        top: 0
