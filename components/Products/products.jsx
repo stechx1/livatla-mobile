@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import ProtoCell from '../products/protocell';
-import LivaltaCellHY40 from '../products/livalta-cell-hy40';
-import LivaltaCellPSY from '../products/livalta-cell-psy';
+import ProtoCell from './protocell';
+import LivaltaCellHY40 from './livalta-cell-hy40';
+import LivaltaCellPSY from './livalta-cell-psy';
 
 export default function Products() {
   const [showProto, setShowProto] = useState(true);
