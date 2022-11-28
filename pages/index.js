@@ -1,6 +1,4 @@
-// import Products from '../components/Products/Products';
-
-import Products from '../components/Products/Products';
+import Products from '../components/NewProducts/Products/Products';
 
 export default function Home() {
   return (
